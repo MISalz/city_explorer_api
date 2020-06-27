@@ -20,3 +20,13 @@ First I must make the wireframe, create the servers and link the API's. Next Ill
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 -->
+
+Number and name of feature: city_01
+
+Estimate of time needed to complete: __1hr__
+
+Start time: _8:48pm____
+
+Finish time: __9:48pm___
+
+Actual time needed to complete: _____
