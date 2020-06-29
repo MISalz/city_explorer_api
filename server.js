@@ -5,14 +5,14 @@ const express = require('express');
 const cors = require('cors');
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 
 const app = express(); 
 app.use( cors() );
 
 app.get('/location', (request,response) => {
-  let data = require('./data/location.json');
+  let data = require('./public/data/location.json');
   let realData = new Location(data[0]);
   response.status(200).json(realData);
 });
@@ -24,7 +24,7 @@ function Location(obj){
 }
 
 app.get('/weather', (request,response) => {
-  let data = require('./data/weather.json');
+  let data = require('./public/data/weather.json');
 
   let locationWeather = [];
   data.description.foreach( chilly => {
