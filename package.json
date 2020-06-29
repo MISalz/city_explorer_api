@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --verbose --coverage",
     "lint": "eslint '**/*.js'",
-    "start": "node server.js"
+    "start": "node server.js",
+    "stop": "node server.stop.js"
   },
   "author": "",
   "license": "MIT",
