@@ -1,7 +1,15 @@
 'use  strict';
 
-let server = 'http://localhost:3000';
+//event listener on submit
+$('form').on('submit', getLocation);
 
+
+function getLocation(err) {
+    err.preventDefault();
+    let locName = $('#city-name').val();
+    console.log('you searched for', locName);
+}
+//
 function loadPage(){
     $.ajax(`${server}/data/location.json`)
         .then( location =>{
@@ -15,16 +23,19 @@ function loadPage(){
 }
 
 function renderMap(){
-    let template = $('map-template').html();
-    let html = Mustache.render(template);
-    $('#map').append(html);
+    let template = $('#map-template').html();
+    let maphtml = Mustache.render(template, location);
+    $('#map').append(maphtml);
 }
 
 
-function render(weather){
+function renderWeather(weather){
+let template = $('#weather').html();
+let target = $('weather2');
+$target.empty();
 
-
+weather.forEach( (r) => {
+    let rHTML = Mustache.render( $template, r );
+    $target.append(rHTML);
+  });
 }
-
-
-loadPage();
