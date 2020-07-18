@@ -1,3 +1,17 @@
-* {
-    background-color: aquamarine;
+
+
+header{
+grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  font-size: 3em;
+  background-color: #369;
+  color: white;
 }
+
+form{
+    grid-column: span 3;
+      padding: 30px;
+      text-align: center;
+      font-size: 2em;
+    }

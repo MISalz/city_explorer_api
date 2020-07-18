@@ -1,7 +1,7 @@
 {
-  "name": "data-structures-and-algorithms",
+  "name": "city_explorer_api",
   "version": "1.0.0",
-  "description": "Data Structures, Algorithms, Code Challenges",
+  "description": "city_explorer_api",
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose --coverage",

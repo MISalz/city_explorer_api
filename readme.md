@@ -30,3 +30,7 @@ Start time: _8:48pm____
 Finish time: __9:48pm___
 
 Actual time needed to complete: _____
+
+ <!-- City Exp link https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/ -->
+
+ <!-- left off -- Lecture 6/17 00:30:37 -->
