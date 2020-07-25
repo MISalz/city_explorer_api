@@ -17,35 +17,36 @@ app.use( cors() );
 app.use(express.static('./public'));
 
 
-// app.get('/location', (request,response) => {
-//   let data = require('./data/location.json');
-//   let realData = new Location(data[0]);
-//   response.status(200).json(realData);
-// });
+app.get('/location', (request,response) => {
+  let locData = require('./public/data/location.json');
+  let realData = new Location(locData);
+  console.log(locData);
+  response.status(200).json(realData);
+});
 
 
-// app.get('/weather', (request,response) => {
-//   let data = require('./data/weather.json');
-  
-//   let locationWeather = [];
-//   data.description.foreach( chilly => {
-//     let weather = new Weather(chilly);
-//     locationWeather.push(weather);
-//   });
-// })
+app.get('/weather', (request,response) => {
+  let weatherData = require('./public/data/weather.json');
+  let locationWeather = [];
+  weatherData.description.foreach( chilly => {
+    let newArr = new Weather(chilly);
+    locationWeather.push(newArr);
+  });
+})
 
-// //get data
-// function Location(obj){
-//   this.latitude = obj.lat;
-//   this.longitude = obj.lon;
-//   this.formatted_query = obj.display_name;
-// }
-// function Weather(obj){
-//   this.locationName = obj.city_name;
-//   this.longitude = obj.lon;
-//   this.forecast = obj.description;
-//   this.time = obj.datetime;
-// }
+//get data
+function Location(obj){
+  this.latitude = obj.lat;
+  this.longitude = obj.lon;
+  this.formatted_query = obj.display_name;
+}
+function Weather(obj){
+  this.locationName = obj.city_name;
+  this.latitude = obj.lat;
+  this.longitude = obj.lon;
+  this.forecast = obj.weather.description;
+  this.time = obj.datetime;
+}
 
 //ERROR RESPONSES
 app.use('*', (request,response) => {

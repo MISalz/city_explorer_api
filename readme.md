@@ -35,9 +35,9 @@ Number and name of feature: city_02
 
 Estimate of time needed to complete: __1hr__
 
-Start time: _8:48pm____
+Start time: _10:20pm____
 
-Finish time: __9:48pm___
+Finish time: __11:30pm___
 
 Actual time needed to complete: _2hrs____
 
