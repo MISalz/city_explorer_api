@@ -18,17 +18,17 @@ app.use(express.static('./public'));
 
 
 app.get('/location', (request,response) => {
-  let locData = require('./public/data/location.json');
+  let locData = require('./public/location.json');
   let realData = new Location(locData);
-  console.log(locData);
   response.status(200).json(realData);
 });
 
 
 app.get('/weather', (request,response) => {
-  let weatherData = require('./public/data/weather.json');
+  let weatherData = require('./public/weather.json');
   let locationWeather = [];
-  weatherData.description.foreach( chilly => {
+
+  weatherData.forEach( chilly => {
     let newArr = new Weather(chilly);
     locationWeather.push(newArr);
   });

@@ -12,7 +12,7 @@ function getLocation(err) {
     let locName = $('#city-name').val();
     console.log('you searched for', locName);
 
-    $.ajax(`http://localhost:3000/location?city=${city}`)
+    $.ajax(`http://localhost:3000/location?city=${locName}`)
     .then(dlocation =>{
       //render on index using lat and long from search
       renderMap(dlocation);
