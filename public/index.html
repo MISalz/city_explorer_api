@@ -5,29 +5,29 @@
     <link rel ="stylesheet" href="./css/styles.css"/>
     <!--map-->
     <script id="map-template" type="x-tmpl-mustache">
-        <img src="http://placehold.it/500x300?text={{latitude}}-{{longitude}}" />
+        <img src="http://placehold.it/500x300?text={{lat}}-{{lon}}"/>
     </script>
     <!--location-->
     <script id="location-template" type="x-tmpl-mustache">
         <div>
-            <header>{{city_name}}</header>
-            <p>Name: {{Name}}</p>
+            <header>{{display_name}}</header>
         </div>
     </script>
     <!--weather-->
     <script id="weather-template" type="x-tmpl-mustache">
         <div>
-            <header>{{weather}}</header>
-            <p>weather: {{weather2}}</p>
+            <header>{{city_name}}</header>
+            <p id="weather2"> {{datetime}}  Forecast:{{weather.description}}</p>
         </div>
     </script>
-
+    <!--heading-->
     <script id="heading-template" type="x-tmpl-mustache">
-            <h2>Results {{display_name}}</h2>
+            <h2>Results for {{display_name}}</h2>
     </script>
 </head>
 <body>
-    <header>City Explorer</header>
+    <header> City Explorer</header>
+
     <main>
     <section>
         <form>
@@ -37,12 +37,13 @@
         </form>
       </section>
   
-      <section id="map">Map</section>
-  
-      <section id="heading">Header</section>
+      <section id="map"></section>
   
       <section>
-        <div id="location_name">LocationName</div>
+        <div id="location_name">Location Name</div>
+      </section>
+      <section>
+        <div id="weather2">weather</div>
       </section>
     </main>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
