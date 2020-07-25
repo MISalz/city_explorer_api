@@ -30,17 +30,25 @@ Start time: _8:48pm____
 Finish time: __9:48pm___
 
 Actual time needed to complete: _2hrs____
-
+//////////////////////////////////////////
 Number and name of feature: city_02
 
 Estimate of time needed to complete: __1hr__
 
 Start time: _10:20pm____
 
-Finish time: __11:30pm___
+Finish time: __12:24pm___
 
 Actual time needed to complete: _2hrs____
 
- <!-- City Exp link https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/ -->
+** finished 6/17/20 up to 1:40secs need to move on to next lecture
+//////////////////////////////////////////
+Number and name of feature: 
 
- <!-- left off -- Lecture 6/17 00:30:37 -->
+Estimate of time needed to complete: 
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 
