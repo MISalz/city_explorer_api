@@ -16,6 +16,7 @@ app.use( cors() );
 //LINK PUBLIC FOLDER
 app.use(express.static('./public'));
 
+
 // app.get('/location', (request,response) => {
 //   let data = require('./data/location.json');
 //   let realData = new Location(data[0]);
